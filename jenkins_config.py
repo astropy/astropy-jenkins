@@ -24,7 +24,7 @@ main = (2.7, 1.7)
 additional_packages = ['cython']
 
 # Additional packages to install in the "main" virtualenv
-main_packages = ['sphinx', 'pytest-cov']
+main_packages = ['sphinx', 'pytest-cov', 'matplotlib']
 
 # The root path for the virtual environments
 root = os.path.expanduser('~')
