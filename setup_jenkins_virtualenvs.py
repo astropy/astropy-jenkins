@@ -107,12 +107,12 @@ def create_all_environments():
                 pip_installs.append(
                     "'numpy>={0},<{1}'".format(numpy, numpy + 0.1))
             pip_installs.extend(config.additional_packages)
-            if python, numpy == config.main:
+            if (python, numpy) == config.main:
                 pip_installs.extend(config.main_packages)
             create_environment(name, python, pip_installs)
 
             # Create a symlink for the main environment
-            if python, numpy == config.main:
+            if (python, numpy) == config.main:
                 main_env = os.path.join(config.root, 'env-main')
                 if os.path.exists(main_env):
                     os.remove(main_env)
